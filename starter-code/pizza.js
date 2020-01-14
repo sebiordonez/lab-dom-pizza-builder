@@ -44,7 +44,14 @@ function renderPepperonni() {
 }
 
 function renderMushrooms() {
-  // Iteration 1: set the visibility of `<section class="mushroom">`
+  document.querySelectorAll('.mushroom').forEach(function($mush){
+    if (state.mushrooms) {
+      $mush.style.visibility = "visible";
+    }
+    else {
+      $mush.style.visibility = "hidden";
+    }
+  })
 }
 
 function renderGreenPeppers() {
